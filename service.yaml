@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-ms-web
+spec:
+  ports:
+  - port: 80
+    targetPort: 8086
+    protocol: TCP
+  selector:
+    name: test-ms-web
+  type: LoadBalancer

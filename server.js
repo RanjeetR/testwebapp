@@ -10,4 +10,6 @@ app.get('/', function(req, res) {
 
 app.use('/', express.static(public));
 
-app.listen(8086);
+app.listen(process.env.PORT || 8086, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });

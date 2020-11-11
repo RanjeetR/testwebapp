@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: test-ms-web
-        image: gcr.io/ranjeet-kubernetes-1/test-ms-web:1.0
+        image: gcr.io/altaf-kubernetes-1/test-ms-web:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8086

@@ -14,19 +14,19 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: test-ms-web
+  name: mswebapptest
   labels:
-    name: test-ms-web
+    name: mswebapptest
 spec:
   replicas: 4
   template:
     metadata:
       labels:
-        name: test-ms-web
+        name: mswebapptest
     spec:
       containers:
-      - name: test-ms-web
-        image: gcr.io/altaf-kubernetes-1/test-ms-web:1.0
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8086
+        - name: mswebapptest
+          image: gcr.io/altaf-kubernetes-1/mswebapptest:1.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8086
